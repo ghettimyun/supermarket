@@ -29,7 +29,7 @@ line item (interface): unit price, unit(default: pkg), desc, qty
 enum: normal, nx, bogo, discount
 idk - something that we can do control interface so driver can run some transactions wiht it but cover some of the pricing options
 
-### feature 1: nx sale - 10m
+### feature 1: nx saleType - 10m
 feature branch
 #### write a test
 watch it fail

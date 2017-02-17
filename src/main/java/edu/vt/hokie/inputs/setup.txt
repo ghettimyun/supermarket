@@ -1,0 +1,8 @@
+Price Apple 2.99
+Price Banana 1.49
+Price Orange 3.49
+Price Bread .99
+
+Sale Apple BOGO
+Sale Bread 342
+Sale ORANGE BOGOHO

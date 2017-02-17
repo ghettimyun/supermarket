@@ -1,0 +1,10 @@
+Price Apple 4
+Price Banana 3
+Price Orange 2
+Price Bread 1
+Price Apple 7
+
+Sale Apple BOGO
+Sale Bread 342
+Sale ORANGE BOGOHO
+Sale Peaches BOGO

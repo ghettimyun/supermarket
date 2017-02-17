@@ -1,0 +1,23 @@
+add apple 32
+add apple
+remove apple 12
+add banana 12
+remove banana 2
+add bread 16
+remove bread
+remove orange 1
+add orange 1
+add 2 blef
+add peaches 2
+add
+asdasdasd
+remove orange 23
+remove
+remove 23 orange
+add orange 12
+sales
+prices
+help
+cart
+checkout
+
