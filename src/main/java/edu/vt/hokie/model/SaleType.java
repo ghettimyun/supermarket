@@ -33,6 +33,6 @@ public enum SaleType
                 return saleType;
             }
         }
-        return null;
+        return SaleType.NO;
     }
 }

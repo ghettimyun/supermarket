@@ -106,7 +106,7 @@ public class ShoppingCart {
     /**
      * Prints out what is in the cart and the total price
      */
-    public void printCartAndSubtotal() {
+    public double printCartAndSubtotal() {
         double total = 0;
 
         for (String item : items) {
@@ -117,6 +117,8 @@ public class ShoppingCart {
 
         System.out.println("\n-----------");
         System.out.printf("%-24s$%.2f\n", "SUBTOTAL:", total);
+
+        return total;
     }
 
     /**
@@ -147,5 +149,41 @@ public class ShoppingCart {
         Calculator calculator = factory.getCalculator(saleMap.get(item));
 
         return calculator.calculate(quantityMap.get(item), priceMap.get(item));
+    }
+
+    /**
+     * Getter for price
+     *
+     * @return Map containing prices
+     */
+    public Map<String, Double> getPriceMap() {
+        return priceMap;
+    }
+
+    /**
+     * Getter for sales
+     *
+     * @return Map containing sales
+     */
+    public Map<String, SaleType> getSaleMap() {
+        return saleMap;
+    }
+
+    /**
+     * Getter for quantities
+     *
+     * @return Map containing quantities
+     */
+    public Map<String, Integer> getQuantityMap() {
+        return quantityMap;
+    }
+
+    /**
+     * Getter for items
+     *
+     * @return List containing items
+     */
+    public List<String> getItems() {
+        return items;
     }
 }

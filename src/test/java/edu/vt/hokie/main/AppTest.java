@@ -26,14 +26,6 @@ public class AppTest
         System.setOut(null);
     }
 
-    /**
-     * Constructor
-     */
-    public AppTest()
-    {
-        // Nothing goes here
-    }
-
     @Test
     public void testMain() {
         String args[] = {"src/test/java/edu/vt/hokie/inputs/test.txt", "src/test/java/edu/vt/hokie/inputs/testSetUp.txt"};
