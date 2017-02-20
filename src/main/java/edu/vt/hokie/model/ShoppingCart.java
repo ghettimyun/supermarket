@@ -14,7 +14,6 @@ public class ShoppingCart {
     private Map<String, Double>     priceMap;
     private Map<String, SaleType>   saleMap;
     private Map<String, Integer>    quantityMap;
-    private CalculatorFactory       factory;
     private List<String>            items;
 
     /**
@@ -24,7 +23,6 @@ public class ShoppingCart {
         priceMap = new HashMap<String, Double>();
         saleMap = new HashMap<String, SaleType>();
         quantityMap = new HashMap<String, Integer>();
-        factory = new CalculatorFactory();
         items = new ArrayList<String>();
     }
 
@@ -68,12 +66,7 @@ public class ShoppingCart {
      * @param quantity The amount to add
      */
     public void addItem(String item, Integer quantity) {
-        if (items.contains(item)) {
-            quantityMap.put(item, quantityMap.get(item) + quantity);
-        }
-        else {
-            System.out.println("Sorry, " + item + " does not exist in the database.");
-        }
+        // TODO Implement
     }
 
     /**
@@ -83,42 +76,14 @@ public class ShoppingCart {
      * @param quantity The amount to remove
      */
     public void removeItem(String item, Integer quantity) {
-        if (items.contains(item)) {
-            if (quantityMap.get(item) == 0) {
-                System.out.println("No " + item + "S in your cart.");
-                return;
-            }
-
-            Integer total = quantityMap.get(item) - quantity;
-
-            if (total <= 0) {
-                total = 0;
-                System.out.println("All " + item + "S removed.");
-            }
-
-            quantityMap.put(item, total);
-        }
-        else {
-            System.out.println("Sorry, " + item + " does not exist in the database.");
-        }
+        // TODO Implement
     }
 
     /**
      * Prints out what is in the cart and the total price
      */
-    public double printCartAndSubtotal() {
-        double total = 0;
-
-        for (String item : items) {
-            double price = calculate(item);
-            total += price;
-            System.out.printf("%-4d%-20s$%.2f\n", quantityMap.get(item), item, price);
-        }
-
-        System.out.println("\n-----------");
-        System.out.printf("%-24s$%.2f\n", "SUBTOTAL:", total);
-
-        return total;
+    public void printCartAndSubtotal() {
+        // TODO Implement
     }
 
     /**
@@ -137,18 +102,6 @@ public class ShoppingCart {
         for (String item : items) {
             System.out.printf("%-24s%25s\n", item, saleMap.get(item).getText());
         }
-    }
-
-    /**
-     * Calculates the total price of an item
-     *
-     * @param item The item
-     * @return The total price of an item
-     */
-    private double calculate(String item) {
-        Calculator calculator = factory.getCalculator(saleMap.get(item));
-
-        return calculator.calculate(quantityMap.get(item), priceMap.get(item));
     }
 
     /**
