@@ -1,4 +1,4 @@
-# tdp software craftsmanship workshop
+# tdp software craftsmanship workshop //
 ## Kata01: Supermarket Pricing
 
 ### intro - 5m
